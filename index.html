@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tipos de cambio</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='estilos.css'>
+</head>
+<body>
+    <h1 class="titulo">Cargando...</h1>
+
+ <div class="contenedor">
+    <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" class="link">Lista de divisas disponibles</a>
+
+    <div class="contenedor-base">
+        <p class="titulo-base">Ingresar divisa base</p>
+        <input type="text" class="base" id="base" placeholder="USD, EUR, ..."/>
+        <button class="boton-base" >Calcular</button>
+    </div>
+
+    <div class="contenedor-fecha">
+        <p class="titulo-fecha">Ingresar fecha (año-mes-dia)</p>
+        <input type="date" class="fecha" id="fecha"/>
+        <button class="boton-fecha" >Ingresar fecha</button>
+    </div>
+
+    <ul class="resultados">Cargando...</ul>
+
+ </div>
+
+    <div class="redes">
+        <ul class="redes-sociales" >
+            <li class="twitter">
+                <span>Twitter:</span>
+                <a href="https://twitter.com/UBerasain" class="link-twitter">@UBerasain</a>
+            </li>
+            <li class="facebook">
+                <span>Facebook:</span>
+                <a href="https://www.facebook.com/Berasain.Uliii/" class="link-facebook">Ulises Berasain</a>
+            </li>
+            <li class="instagram">
+                <span>Instagram:</span>
+                <a href="https://www.instagram.com/uliuli77/" class="link-instagram">Ulises Berasain</a>
+            </li>
+            <li class="email">
+                <span>e-mail:</span>
+                <a href="mailto:uli_cuervo_79@hotmail.com" class="link-email">uli_cuervo_79@hotmail.com</a>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src='src/main.js'></script>
+</body>
+</html>

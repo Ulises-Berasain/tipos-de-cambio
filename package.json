@@ -1,0 +1,30 @@
+{
+  "name": "clase-11",
+  "version": "1.0.0",
+  "description": "Muestra de los tipos de cambio entre EUR y DOL",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress-dev": "cypress open"
+  },
+  "author": "Ulises Berasain",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jquery": "^3.5.1",
+    "bootstrap": "^4.5.2",
+    "cypress": "^4.12.1",
+    "http-server": "^0.12.3",
+    "jquery": "^1.12.4",
+    "json": "^9.0.6",
+    "popper.js": "^1.16.1"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ulises-Berasain/tipos-de-cambio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ulises-Berasain/tipos-de-cambio/issues"
+  },
+  "homepage": "https://github.com/Ulises-Berasain/tipos-de-cambio#readme"
+}
