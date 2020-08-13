@@ -1,4 +1,5 @@
 /// <reference types="Cypress"/>
+///<reference types="jquery" />
 
 const pagina = "http://192.168.0.111:8080";
 
@@ -11,8 +12,20 @@ describe("Test de Tipos de cambios", () =>{
         cy.get(".base").type("USD");
         cy.get(".boton-base").click();
         cy.get(".fecha").type("2020-03-11");
-        cy.get("boton-fecha").click();
+        cy.get(".boton-fecha").click();
 
-        cy.get(".resultado").should("have.text", `https://api.exchangeratesapi.io/${$($fecha).val()}?base=${$($base).val()}`)
+        cy.get("h1").should("have.text", "Cambios del día 2020-03-11 en base USD");
+
+        cy.get(".base").type("asfsaf");
+        cy.get(".boton-base").click();
+
+        cy.get("h1").should("have.text", "Error!");
+        cy.get(".error").should("have.text","Error! ingresar solo 3 letras en mayusculas o no ingresar ninguna letra");
+
+        cy.get(".fecha").type("asfsaf");
+        cy.get(".boton-fecha").click();
+
+        cy.get("h1").should("have.text", "Error!");
+        cy.get(".error").should("have.text","Error! ingresar fecha en formato aaaa-mm-dd respetando los '-' sin espacios e ingresar previamente la base");
     })
 })
