@@ -1,7 +1,7 @@
 /// <reference types="Cypress"/>
-///<reference types="jquery" />
+/// <reference types="jquery" />
 
-const pagina = "http://192.168.0.111:8080";
+const pagina = "http://localhost:8080";
 
 describe("Test de Tipos de cambios", () =>{
     before(() =>{
@@ -26,6 +26,6 @@ describe("Test de Tipos de cambios", () =>{
         cy.get(".boton-fecha").click();
 
         cy.get("h1").should("have.text", "Error!");
-        cy.get(".error").should("have.text","Error! ingresar fecha en formato aaaa-mm-dd respetando los '-' sin espacios e ingresar previamente la base");
+        cy.get(".error").should("have.text","Error! ingresar una fecha desde 1999 en adelante");
     })
 })

@@ -6,7 +6,7 @@ const $fecha = $(".fecha");
       fetch(`https://api.exchangeratesapi.io/latest?base=${$($base).val()}`)
       .then(respuesta => respuesta.json())
       .then(respuestaJSON => {
-        $("h1").text(
+        $(".titulo").text(
           `Cambios del día ${respuestaJSON.date} en base ${respuestaJSON.base}`
         );
 
@@ -19,7 +19,7 @@ const $fecha = $(".fecha");
         });
       })
       .catch(error => {
-        $("h1").text("Error!");
+        $(".titulo").text("Error!");
         $(".resultados").html("").html("Error! ingresar solo 3 letras en mayusculas o no ingresar ninguna letra", error).removeClass("resultado").addClass("error");
         $(".base").removeClass("base").addClass("error");
       });
@@ -29,7 +29,7 @@ const $fecha = $(".fecha");
     fetch(`https://api.exchangeratesapi.io/${$($fecha).val()}?base=${$($base).val()}`)
     .then(respuesta => respuesta.json())
     .then(respuestaJSON => {
-      $("h1").text(
+      $(".titulo").text(
         `Cambios del día ${respuestaJSON.date} en base ${respuestaJSON.base}`
       );
   
@@ -42,8 +42,8 @@ const $fecha = $(".fecha");
       });
     })
     .catch(error => {
-      $("h1").text("Error!");
-      $(".resultados").html("").html("Error! ingresar fecha en formato aaaa-mm-dd respetando los '-' sin espacios e ingresar previamente la base", error).removeClass("resultado").addClass("error");
+      $(".titulo").text("Error!");
+      $(".resultados").html("").html("Error! ingresar una fecha desde 1999 en adelante", error).removeClass("resultado").addClass("error");
       $(".fecha").removeClass("fecha").addClass("error");
     });
 })

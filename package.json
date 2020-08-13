@@ -4,13 +4,12 @@
   "description": "Muestra de los tipos de cambio entre EUR y DOL",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress-dev": "cypress open"
   },
   "author": "Ulises Berasain",
   "license": "ISC",
   "devDependencies": {
-    "3": "^2.1.0",
-    "-": "0.0.1",
     "@types/jquery": "^3.5.1",
     "bootstrap": "^4.5.2",
     "cypress": "^4.12.1",
